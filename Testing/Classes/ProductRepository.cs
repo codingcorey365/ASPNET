@@ -4,7 +4,7 @@ using Dapper;
 using Testing.Models;
 using Testing.Repositories;
 
-namespace Testing;
+namespace Testing.Classes;
 
 public class ProductRepository : IProductRepository
 {
@@ -16,5 +16,10 @@ public class ProductRepository : IProductRepository
     public IEnumerable<Product> GetAllProducts()
     {
         return _conn.Query<Product>("SELECT * FROM PRODUCTS;");
+    }
+
+    public Product GetProduct(int id)
+    {
+        return _conn.QuerySingle<Product>("SELECT * FROM PRODUCTS WHERE PRODUCTID = @id", new { id = id });
     }
 }
