@@ -9,14 +9,6 @@
     <PackageReference Include="MySql.Data" Version="8.4.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Product\Index.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Views\Product\Index.cshtml" />
-  </ItemGroup>
-
 
 
 </Project>
